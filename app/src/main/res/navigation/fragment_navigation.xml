@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/carsFragment">
+
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.example.carapp.ui.CarsFragment"
+        android:label="CarsFragment" >
+        <action
+            android:id="@+id/action_carsFragment_to_detailCarMakeFragment"
+            app:destination="@id/detailCarMakeFragment">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailCarMakeFragment"
+        android:name="com.example.carapp.ui.DetailCarMakeFragment"
+        android:label="fragment_detail_car_make"
+        tools:layout="@layout/fragment_detail_car_make" >
+        <argument
+            android:name="CarMakeId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
